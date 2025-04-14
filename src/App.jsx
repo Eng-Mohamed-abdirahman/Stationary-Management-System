@@ -5,8 +5,7 @@ function App() {
 
   const location  = useLocation()
  
-  const hideDashboard = location.pathname === '/Dashboard'
-
+  const hideDashboard = location.pathname.startsWith('/Dashboard')
   return (
     <div>
       {!hideDashboard && <Header/>}
