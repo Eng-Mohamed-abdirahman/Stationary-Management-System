@@ -12,6 +12,8 @@ import Suppliers from "./src/components/Suppliers";
 
 import StockManagement from "./src/components/StockManagement";
 import Users from "./src/components/Users";
+import SignInPage from "./src/pages/signin";
+import SignUpPage from "./src/pages/signup";
 
 export const router = createBrowserRouter([
     {
@@ -34,6 +36,14 @@ export const router = createBrowserRouter([
             {
                 path:"Contact",
                 element:<Contact/>
+            },
+            {
+                path:'signin',
+                element:<SignInPage/>
+            },
+            {
+                path:'signup',
+                element:<SignUpPage/>
             },
             {
                 path:"Dashboard",
