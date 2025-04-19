@@ -92,7 +92,7 @@ const Contact = () => {
       <footer className="bg-gray-900 text-white py-6">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
           <p>© 2025 StationaryMS. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex space-x-6 mt-5 md:mt-0">
             <a href="#" className="hover:underline">Home</a>
             <a href="#" className="hover:underline">About</a>
             <a href="#" className="hover:underline">Privacy</a>
