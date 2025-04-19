@@ -39,7 +39,7 @@ const Home = () => {
         <div className="text-center mb-6">
           <h2 className="text-xl font-semibold">Trusted by institutions and businesses</h2>
         </div>
-        <div className="flex justify-center space-x-28 flex-wrap max-w-4xl mx-auto">
+        <div className="flex justify-center space-x-26 flex-wrap max-w-4xl mx-auto">
         <FaSchool className="text-4xl text-blue-600" />
           <FaIndustry className="text-4xl text-blue-600"/>
           <FaUniversity className="text-4xl text-blue-600"/>
