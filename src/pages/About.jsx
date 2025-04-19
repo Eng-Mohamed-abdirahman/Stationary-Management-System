@@ -75,7 +75,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/*  */}
       <section className="bg-blue-600 text-white py-12 px-4 text-center">
         <h2 className="text-2xl font-bold mb-4">Ready to get started?</h2>
         <p className="mb-6">Join institutions that are transforming how they manage their supplies.</p>
