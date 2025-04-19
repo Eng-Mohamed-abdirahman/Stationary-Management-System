@@ -14,6 +14,8 @@ import StockManagement from "./src/components/StockManagement";
 import Users from "./src/components/Users";
 import SignInPage from "./src/pages/signin";
 import SignUpPage from "./src/pages/signup";
+import ProtectedRoute from "./src/components/ProtectedRoute";
+import PublicRoute from "./src/components/PublicRoute";
 
 export const router = createBrowserRouter([
     {
@@ -39,7 +41,11 @@ export const router = createBrowserRouter([
             },
             {
                 path:'signin',
-                element:<SignInPage/>
+                element:
+                <PublicRoute>
+                    <SignInPage/>
+                </PublicRoute>
+                
             },
             {
                 path:'signup',
@@ -47,7 +53,10 @@ export const router = createBrowserRouter([
             },
             {
                 path:"Dashboard",
-                element:<Dashboard/>,
+                element:
+                <ProtectedRoute>
+                    <Dashboard/>    
+                </ProtectedRoute>,
                 children:[
                     {
                         path:'Categories',
