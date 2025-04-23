@@ -1,90 +1,67 @@
-
+import {
+  FaBoxOpen,
+  FaChartBar,
+  FaRegBookmark,
+  FaClipboardList,
+  FaUser,
+  FaThLarge,
+  FaCog,
+  FaSignOutAlt,
+} from "react-icons/fa";
 import { NavLink } from "react-router";
-import { FaRegBookmark, FaTableCells, FaBoxOpen, FaClipboardList, FaUser, FaChartBar } from "react-icons/fa6";
 
+// 🧩 Halkan waa component-ka item-ka navigation-ka
+const DashboardNavItem = ({ to, icon: Icon, label }) => (
+  <NavLink
+    to={to}
+    className={({ isActive }) =>
+      `flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition ${
+        isActive
+          ? "bg-indigo-100 text-indigo-600"
+          : "text-gray-700 hover:bg-gray-100"
+      }`
+    }
+  >
+    <Icon className="text-base" />
+    <span>{label}</span>
+  </NavLink>
+);
+
+// 🧱 Halkan waa Sidebar-ka laftiisa, magaciisana waa DashboardNav
 const DashboardNav = () => {
-    return (
-        <div className="flex flex-col space-y-7 bg">
-          <NavLink
-            className={({ isActive }) =>
-              `flex items-center gap-2 px-3 py-2 rounded-md cursor-pointer text-sm ${
-                isActive
-                  ? "border-l-4 border-indigo-600 text-indigo-600"
-                  : "text-gray-700 hover:bg-gray-100"
-              }`
-            }
-            to="Suppliers"
-          >
-            <FaBoxOpen className="text-base" />
-            <span>Suppliers</span>
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              `flex items-center gap-2 px-3 py-2 rounded-md cursor-pointer text-sm ${
-                isActive
-                  ? "border-l-4 border-indigo-600 text-indigo-600"
-                  : "text-gray-700 hover:bg-gray-100"
-              }`
-            }
-            to="Reports"
-          >
-            <FaChartBar className="text-base" />
-            <span>Reports</span>
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              `flex items-center gap-2 px-3 py-2 rounded-md cursor-pointer text-sm ${
-                isActive
-                  ? "border-l-4 border-indigo-600 text-indigo-600"
-                  : "text-gray-700 hover:bg-gray-100"
-              }`
-            }
-            to="Stationary"
-          >
-            <FaRegBookmark className="text-base" />
-            <span>Stationary</span>
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              `flex items-center gap-2 px-3 py-2 rounded-md cursor-pointer text-sm ${
-                isActive
-                  ? "border-l-4 border-indigo-600 text-indigo-600"
-                  : "text-gray-700 hover:bg-gray-100"
-              }`
-            }
-            to="StockManagement"
-          >
-            <FaClipboardList className="text-base" />
-            <span>Stock Management</span>
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              `flex items-center gap-2 px-3 py-2 rounded-md cursor-pointer text-sm ${
-                isActive
-                  ? "border-l-4 border-indigo-600 text-indigo-600"
-                  : "text-gray-700 hover:bg-gray-100"
-              }`
-            }
-            to="Users"
-          >
-            <FaUser className="text-base" />
-            <span>Users</span>
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              `flex items-center gap-2 px-3 py-2 rounded-md cursor-pointer text-sm ${
-                isActive
-                  ? "border-l-4 border-indigo-600 text-indigo-600"
-                  : "text-gray-700 hover:bg-gray-100"
-              }`
-            }
-            to="Categories"
-          >
-            <FaTableCells className="text-base" />
-            <span>Categories</span>
-          </NavLink>
-        </div>
-      );
-}
+  return (
+    <div className="flex flex-col justify-between h-full p-4 bg-white shadow-md">
+      <div className="space-y-2">
+        <h2 className="text-xs uppercase font-semibold text-gray-400 px-2">
+          Inventory
+        </h2>
+        <DashboardNavItem to="Suppliers" icon={FaBoxOpen} label="Suppliers" />
+        <DashboardNavItem to="Reports" icon={FaChartBar} label="Reports" />
+        <DashboardNavItem
+          to="Stationary"
+          icon={FaRegBookmark}
+          label="Stationary"
+        />
+        <DashboardNavItem
+          to="StockManagement"
+          icon={FaClipboardList}
+          label="Stock Management"
+        />
 
-export default DashboardNav
+        <h2 className="text-xs uppercase font-semibold text-gray-400 mt-4 px-2">
+          Users
+        </h2>
+        <DashboardNavItem to="Users" icon={FaUser} label="Users" />
+        <DashboardNavItem to="Categories" icon={FaThLarge} label="Categories" />
+      </div>
+
+      {/* Footer actions */}
+      <div className="space-y-2 pt-4 border-t border-gray-200 mt-6">
+        <DashboardNavItem to="/settings" icon={FaCog} label="Settings" />
+        <DashboardNavItem to="/logout" icon={FaSignOutAlt} label="Logout" />
+      </div>
+    </div>
+  );
+};
+
+export default DashboardNav;

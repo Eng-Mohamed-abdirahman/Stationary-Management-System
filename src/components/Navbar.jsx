@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import { FiSearch, FiBell } from 'react-icons/fi';
+import { useUser } from '../context/UserContext';
 
 const Navbar = () => {
+ const {username}= useUser()
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-white shadow">
       <h1 className="text-xl font-bold text-gray-800">Dashboard</h1>
@@ -26,8 +28,8 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <FaUser className='w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center p-1'/>
           <div>
-            <div className="text-sm font-semibold">Musfiq</div>
-            <div className="text-xs text-gray-500">Admin</div>
+            <div className="text-sm font-semibold">{username}</div>
+           
           </div>
         </div>
       </div>
