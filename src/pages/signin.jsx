@@ -40,7 +40,7 @@ export default function SignInPage() {
 
             <button
               type="submit"
-              className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-md transition duration-200"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-200"
               disabled={isLoading}
             >
               {isLoading ? 'Signing in...' : 'Sign In'}
@@ -49,7 +49,7 @@ export default function SignInPage() {
 
           <p className="text-center text-sm text-gray-600 mt-6">
             Don't have an account?{' '}
-            <Link to="/signup" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link to="/signup" className="text-blue-600 hover:text-blue-800 font-semibold">
               Sign up
             </Link>
           </p>

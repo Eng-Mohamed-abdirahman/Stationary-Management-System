@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import  supabase  from "../lib/supabase"; // make sure this is configured
+import  supabase  from "../lib/supabase"; 
 import SupplierModal from "./SupplierModal";
 
 const Suppliers = () => {

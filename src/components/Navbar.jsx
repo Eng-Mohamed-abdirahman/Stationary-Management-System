@@ -9,14 +9,7 @@ const Navbar = () => {
     <header className="flex items-center justify-between px-6 py-4 bg-white shadow">
       <h1 className="text-xl font-bold text-gray-800">Dashboard</h1>
       <div className="flex items-center space-x-4">
-        <div className="relative">
-          <FiSearch className="absolute left-3 top-2.5 text-gray-400" />
-          <input
-            type="text"
-            placeholder="Search here..."
-            className="pl-10 pr-4 py-2 rounded-lg bg-gray-100 focus:outline-none"
-          />
-        </div>
+        {/*  */}
 
        
 

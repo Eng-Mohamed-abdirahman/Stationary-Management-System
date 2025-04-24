@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import SupplierModal from "./SupplierModal";
 const SupplierModal = ({ fetchSuppliers, setShowModal, supplier }) => {
   const [formData, setFormData] = useState({
     name: "",

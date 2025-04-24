@@ -1,16 +1,6 @@
-import {
-  FaBoxOpen,
-  FaChartBar,
-  FaRegBookmark,
-  FaClipboardList,
-  FaUser,
-  FaThLarge,
-  FaCog,
-  FaSignOutAlt,
-} from "react-icons/fa";
+import { FaBoxOpen, FaRegBookmark, FaUser } from "react-icons/fa";
 import { NavLink } from "react-router";
 
-// 🧩 Halkan waa component-ka item-ka navigation-ka
 const DashboardNavItem = ({ to, icon: Icon, label }) => (
   <NavLink
     to={to}
@@ -27,7 +17,6 @@ const DashboardNavItem = ({ to, icon: Icon, label }) => (
   </NavLink>
 );
 
-// 🧱 Halkan waa Sidebar-ka laftiisa, magaciisana waa DashboardNav
 const DashboardNav = () => {
   return (
     <div className="flex flex-col justify-between h-full p-4 bg-white shadow-md">
@@ -36,29 +25,17 @@ const DashboardNav = () => {
           Inventory
         </h2>
         <DashboardNavItem to="Suppliers" icon={FaBoxOpen} label="Suppliers" />
-        <DashboardNavItem to="Reports" icon={FaChartBar} label="Reports" />
+
         <DashboardNavItem
           to="Stationary"
           icon={FaRegBookmark}
           label="Stationary"
-        />
-        <DashboardNavItem
-          to="StockManagement"
-          icon={FaClipboardList}
-          label="Stock Management"
         />
 
         <h2 className="text-xs uppercase font-semibold text-gray-400 mt-4 px-2">
           Users
         </h2>
         <DashboardNavItem to="Users" icon={FaUser} label="Users" />
-        <DashboardNavItem to="Categories" icon={FaThLarge} label="Categories" />
-      </div>
-
-      {/* Footer actions */}
-      <div className="space-y-2 pt-4 border-t border-gray-200 mt-6">
-        <DashboardNavItem to="/settings" icon={FaCog} label="Settings" />
-        <DashboardNavItem to="/logout" icon={FaSignOutAlt} label="Logout" />
       </div>
     </div>
   );

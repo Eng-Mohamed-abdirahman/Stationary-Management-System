@@ -1,5 +1,3 @@
-// components/ProtectedRoute.jsx
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import  supabase from "../lib/supabase";
@@ -24,7 +22,7 @@ const ProtectedRoute = ({ children }) => {
   }, [navigate]);
 
   if (loading) {
-    return <div className="text-center mt-10">Loading...</div>; // Or a spinner
+    return <div className="text-center mt-10">Loading...</div>; 
   }
 
   return children;

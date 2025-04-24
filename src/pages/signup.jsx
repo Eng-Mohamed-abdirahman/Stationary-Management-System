@@ -66,7 +66,7 @@ export default function SignUpPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-md transition duration-200"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-200"
             >
               {isLoading ? 'Creating Account...' : 'Create Account'}
             </button>
@@ -74,7 +74,7 @@ export default function SignUpPage() {
 
           <p className="text-center text-sm text-gray-600 mt-6">
             Already have an account?{' '}
-            <Link to="/signin" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link to="/signin" className="text-blue-600 hover:text-blue-800 font-semibold">
               Sign in
             </Link>
           </p>

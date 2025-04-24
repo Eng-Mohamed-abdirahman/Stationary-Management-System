@@ -1,5 +1,3 @@
-// components/PublicRoute.jsx
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import  supabase  from "../lib/supabase";
@@ -14,7 +12,7 @@ const PublicRoute = ({ children }) => {
       const session = data.session;
 
       if (session) {
-        navigate("/dashboard"); // or any other page
+        navigate("/dashboard"); 
       } else {
         setChecking(false);
       }

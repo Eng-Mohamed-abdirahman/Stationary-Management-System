@@ -5,13 +5,9 @@ import About from "./src/pages/About";
 import Contact from "./src/pages/Contact";
 import Home from "./src/pages/Home";
 import Dashboard from "./src/pages/Dashboard";
-import Categories from "./src/components/Categories";
-import Reports from "./src/components/Reports";
 import Stationaries from "./src/components/Stationaries";
 import Suppliers from "./src/components/Suppliers";
 
-import StockManagement from "./src/components/StockManagement";
-import Users from "./src/components/Users";
 import SignInPage from "./src/pages/signin";
 import SignUpPage from "./src/pages/signup";
 import ProtectedRoute from "./src/components/ProtectedRoute";
@@ -58,14 +54,7 @@ export const router = createBrowserRouter([
                     <Dashboard/>    
                 </ProtectedRoute>,
                 children:[
-                    {
-                        path:'Categories',
-                        element: <Categories />
-                    },
-                    {
-                        path:'Reports',
-                        element:<Reports/>
-                    },
+                    
                     {
                         path:'Stationary',
                         element:<Stationaries />
@@ -74,14 +63,7 @@ export const router = createBrowserRouter([
                         path:'Suppliers',
                         element:<Suppliers/>
                     },
-                    {
-                        path:'StockManagement',
-                        element:<StockManagement />
-                    },
-                    {
-                        path:'Users',
-                        element:<Users/>
-                    }
+                    
                 ]
             }
         ]
